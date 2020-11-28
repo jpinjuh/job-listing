@@ -1,21 +1,21 @@
 <template>
   <v-app>
-    <AdminLayout />
+    <MainLayout />
   </v-app>
 </template>
 
 <script>
-import AdminLayout from "./layouts/AdminLayout";
+import MainLayout from "./layouts/MainLayout"
 
 export default {
   name: 'App',
 
   components: {
-    AdminLayout
+    MainLayout
   },
 
   data: () => ({
     //
   }),
-};
+}
 </script>
