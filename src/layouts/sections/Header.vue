@@ -1,7 +1,5 @@
 <template>
-  <div>
-    Filters
-  </div>
+  <div style="height: 156px; background-color: grey" />
 </template>
 
 <script>

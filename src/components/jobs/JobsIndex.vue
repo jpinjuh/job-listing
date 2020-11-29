@@ -1,12 +1,15 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col class="py-6" style="margin-top: -48px; background-color: lightgray">
-        <slot name="filters" />
+    <v-row
+      class="mb-6 mb-md-2"
+      style="margin-top: -72px"
+    >
+      <v-col>
+        <slot name="heading" />
       </v-col>
     </v-row>
     <v-row>
-      <v-col class="px-0">
+      <v-col>
         <slot name="jobs-list" />
       </v-col>
     </v-row>

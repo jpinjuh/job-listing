@@ -1,20 +1,22 @@
 <template>
   <div>
     <v-main>
-      <heading />
-      <v-fade-transition mode="out-in">
-        <router-view></router-view>
-      </v-fade-transition>
+      <Header />
+      <v-container>
+        <v-fade-transition mode="out-in">
+          <router-view></router-view>
+        </v-fade-transition>
+      </v-container>
     </v-main>
   </div>
 </template>
 
 <script>
-import Heading from '@/components/heading/Heading'
+import Header from './sections/Header'
 
 export default {
   components: {
-    Heading
+    Header
   },
 
   data: () => ({
