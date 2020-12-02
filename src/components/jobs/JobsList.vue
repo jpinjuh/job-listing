@@ -1,5 +1,8 @@
 <template>
-  <v-list three-line>
+  <v-list
+    class="background1"
+    three-line
+  >
     <v-list-item
       v-for="job in jobs"
       :key="job.id"
@@ -28,29 +31,31 @@
                 </span>
                 <v-chip
                   v-if="job['new']"
-                  class="new-tag mr-2 text-uppercase font-weight-bold white--text"
+                  class="new-tag mr-2 primary white--text text-uppercase font-weight-bold"
                   small
                 >
                   New!
                 </v-chip>
                 <v-chip
                   v-if="job['featured']"
-                  class="featured-tag text-uppercase font-weight-bold white--text"
+                  class="featured-tag tertiary white--text text-uppercase font-weight-bold"
                   small
                 >
                   Featured
                 </v-chip>
               </v-list-item-subtitle>
-              <v-list-item-title class="list-item--title mb-4 mb-sm-3 font-weight-bold align-self-center">
-                {{ job.position }}
+              <v-list-item-title class="mb-4 mb-sm-3 font-weight-bold align-self-center">
+                <span class="list-item--title">
+                  {{ job.position }}
+                </span>
               </v-list-item-title>
               <v-list-item-subtitle class="align-self-end">
                 <v-breadcrumbs
                   :items="[{text: job.postedAt}, {text: job.contract}, {text: job.location}]"
-                  class="breadcrumbs pa-0"
+                  class="breadcrumbs secondary--text pa-0"
                 >
                   <template v-slot:divider>
-                    <v-icon class="breadcrumbs-divider">
+                    <v-icon color="secondary">
                       mdi-circle-medium
                     </v-icon>
                   </template>
@@ -61,18 +66,21 @@
 
           <v-col
             cols="12"
-            class="pt-5 pb-2 d-flex d-md-none"
+            class="d-flex d-md-none pt-5 pb-2"
           >
-            <v-divider class="list-item--divider" />
+            <v-divider
+              class="secondary"
+              style="opacity: 0.5"
+            />
           </v-col>
   
-          <v-col cols="12" md="6" class="py-0 d-flex align-center">
+          <v-col cols="12" md="6" class="d-flex align-center py-0">
             <v-row>
-              <v-col cols="12" class="py-0 d-flex justify-start justify-md-end flex-wrap">
+              <v-col cols="12" class="d-flex justify-start justify-md-end flex-wrap py-0 ">
                 <v-chip
                   v-for="(tool, index) in [ job.role, job.level, ...job.languages, ...job.tools ]"
                   :key="index"
-                  class="list-item--tag tag ml-0 mr-4 ml-md-4 mr-md-0 my-2"
+                  class="list-item--tag ml-0 mr-4 ml-md-4 mr-md-0 my-2 font-weight-bold"
                   label
                 >
                   {{ tool }}
