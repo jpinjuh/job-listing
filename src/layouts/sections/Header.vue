@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 156px; background-color: grey" />
+  <div class="header" />
 </template>
 
 <script>
@@ -10,5 +10,5 @@ export default {
   data: () => ({
     //
   }),
-}
+};
 </script>

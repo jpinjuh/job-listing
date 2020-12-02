@@ -1,0 +1,110 @@
+/* Heading */
+
+.heading {
+  background-color: $list-item-color !important;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+}
+
+.tag {
+  background-color: $tags-color;
+  color: $primary-color !important;
+  font-weight: $bold;
+}
+
+.close-btn {
+  height: 100%;
+  width: 32px;
+  background-color: $primary-color;
+  cursor: pointer;
+  &:hover {
+    background-color: $tertiary-color;
+  }
+}
+
+.clear-btn {
+  color: $primary-color;
+  font-weight: $bold;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* JobsList */
+.list-item {
+  background-color: $list-item-color !important;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  &--title {
+    font-size: $title-size;
+    color: $tertiary-color;
+    cursor: pointer;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &--tag {
+    cursor: pointer;
+    &:hover {
+      background-color: $primary-color !important;
+      color: #fff !important;
+    }
+  }
+  &--company {
+    font-size: $font-size;
+  }
+  &--divider {
+    border-color: $secondary-color !important;
+    opacity: 0.5;
+  }
+}
+
+// avatar position on mobile
+.avatar-mobile {
+  position: absolute !important;
+  top: -24px;
+}
+
+// if job is featured
+.featured {
+  border-left: 5px solid $primary-color;
+}
+
+.featured-tag {
+  background-color: $tertiary-color !important;
+  font-size: $tags-sm-size !important;
+}
+
+.new-tag {
+  background-color: $primary-color !important;
+  font-size: $tags-sm-size !important;
+}
+
+.breadcrumbs, .breadcrumbs-divider {
+  color: $secondary-color !important;
+}
+
+.v-breadcrumbs__item {
+  font-size: $font-size;
+}
+
+@media only screen and (max-width: 600px) {
+  .clear-btn {
+    font-size: $font-sm-size;
+  }
+  .breadcrumbs li:nth-child(even) {
+    padding: 0 4px !important;
+  }
+  .v-breadcrumbs__item {
+    font-size: 13px;
+  }
+  .list-item {
+    &--title {
+      font-size: $font-size;
+    }
+    &--company, &--breadcrumbs {
+      font-size: $font-sm-size;
+    }
+  }
+}

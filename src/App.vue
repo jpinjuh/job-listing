@@ -1,18 +1,15 @@
 <template>
   <v-app>
-    <MainLayout />
+    <router-view />
   </v-app>
 </template>
 
 <script>
-import MainLayout from './layouts/MainLayout'
 
 export default {
   name: 'App',
 
-  components: {
-    MainLayout
-  },
+  components: {},
 
   data: () => ({
     //

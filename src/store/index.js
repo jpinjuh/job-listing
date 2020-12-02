@@ -1,17 +1,7 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import jobs from './modules/jobs/index'
+import Vue from 'vue';
+import Vuex from 'vuex';
+import storeConfig from './storeConfig';
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-    jobs
-  }
-})
+export default new Vuex.Store(storeConfig);

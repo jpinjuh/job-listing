@@ -1,0 +1,15 @@
+/* MainLayout */
+.v-list {
+  background-color: $background-color !important;
+}
+
+.header {
+  height: 156px;
+  background: $primary-color url('/images/bg-header-desktop.svg');
+}
+
+@media only screen and (max-width: 375px) {
+  .header {
+    background: $primary-color url('/images/bg-header-mobile.svg');
+  }
+}

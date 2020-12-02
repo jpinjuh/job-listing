@@ -2,17 +2,29 @@
   <div>
     <v-main>
       <Header />
-      <v-container>
-        <v-fade-transition mode="out-in">
-          <router-view></router-view>
-        </v-fade-transition>
+      <v-container fluid>
+        <v-container>
+          <v-row
+            class="mb-6 mb-sm-2"
+            style="margin-top: -72px"
+          >
+            <v-col>
+              <slot name="heading" />
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <slot name="list" />
+            </v-col>
+          </v-row>
+        </v-container>
       </v-container>
     </v-main>
   </div>
 </template>
 
 <script>
-import Header from './sections/Header'
+import Header from './sections/Header';
 
 export default {
   components: {
@@ -22,5 +34,5 @@ export default {
   data: () => ({
     //
   }),
-}
+};
 </script>
