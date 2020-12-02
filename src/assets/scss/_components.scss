@@ -34,7 +34,7 @@
     font-size: $font-size;
   }
   &--title {
-    font-size: $title-size;
+    font-size: $font-lg-size;
     color: var(--v-tertiary-base);
     cursor: pointer;
     &:hover {
@@ -63,7 +63,8 @@
   top: -24px;
 }
 
-.new-tag, .featured-tag {
+// status tags for job
+.status-tag {
   font-size: $font-xs-size !important;
 }
 

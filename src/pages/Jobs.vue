@@ -1,8 +1,11 @@
 <template>
   <div>
     <main-layout>
-      <template slot="heading">
-        <heading />
+      <template 
+        v-if="filters.length > 0"
+        slot="heading"
+      >
+        <heading :filters="filters" />
       </template>
       <template slot="list">
         <jobs-list />
@@ -16,7 +19,7 @@ import MainLayout from '@/layouts/MainLayout';
 import Heading from '@/components/heading/Heading';
 import JobsList from '@/components/jobs/JobsList';
 
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   components: {
@@ -31,6 +34,10 @@ export default {
 
   created () {
     this.getJobs();
+  },
+
+  computed: {
+    ...mapGetters(['filters'])
   },
 
   methods: {

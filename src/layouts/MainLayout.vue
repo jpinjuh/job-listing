@@ -5,10 +5,10 @@
       <v-container fluid>
         <v-container>
           <v-row
-            class="mb-6 mb-sm-2"
+            
             style="margin-top: -72px"
           >
-            <v-col>
+            <v-col class="mb-6 mb-sm-2" style="min-height: 96px;">
               <slot name="heading" />
             </v-col>
           </v-row>

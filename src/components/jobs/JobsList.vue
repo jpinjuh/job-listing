@@ -4,7 +4,7 @@
     three-line
   >
     <v-list-item
-      v-for="job in jobs"
+      v-for="job in allJobs"
       :key="job.id"
       class="list-item mb-10 mb-md-6 px-6 px-md-10 pt-8 pb-4 pb-md-8"
       :class="{ 'featured': job.featured }"
@@ -23,7 +23,11 @@
       </v-list-item-avatar>
       <v-container class="pa-0">
         <v-row>
-          <v-col cols="12" md="6" class="pa-0 pl-3">
+          <v-col
+            cols="12"
+            md="6"
+            class="pa-0 pl-3"
+          >
             <v-list-item-content class="pa-0 d-flex">
               <v-list-item-subtitle class="mb-3 align-center align-self-baseline">
                 <span class="list-item--company mr-4 font-weight-bold">
@@ -31,14 +35,14 @@
                 </span>
                 <v-chip
                   v-if="job['new']"
-                  class="new-tag mr-2 primary white--text text-uppercase font-weight-bold"
+                  class="status-tag mr-2 primary white--text text-uppercase font-weight-bold"
                   small
                 >
                   New!
                 </v-chip>
                 <v-chip
                   v-if="job['featured']"
-                  class="featured-tag tertiary white--text text-uppercase font-weight-bold"
+                  class="status-tag tertiary white--text text-uppercase font-weight-bold"
                   small
                 >
                   Featured
@@ -51,10 +55,10 @@
               </v-list-item-title>
               <v-list-item-subtitle class="align-self-end">
                 <v-breadcrumbs
-                  :items="[{text: job.postedAt}, {text: job.contract}, {text: job.location}]"
+                  :items="job.breadcrumbs"
                   class="breadcrumbs secondary--text pa-0"
                 >
-                  <template v-slot:divider>
+                  <template slot="divider">
                     <v-icon color="secondary">
                       mdi-circle-medium
                     </v-icon>
@@ -74,16 +78,24 @@
             />
           </v-col>
   
-          <v-col cols="12" md="6" class="d-flex align-center py-0">
+          <v-col
+            cols="12"
+            md="6"
+            class="d-flex align-center py-0"
+          >
             <v-row>
-              <v-col cols="12" class="d-flex justify-start justify-md-end flex-wrap py-0 ">
+              <v-col
+                cols="12"
+                class="d-flex justify-start justify-md-end flex-wrap py-0 "
+              >
                 <v-chip
-                  v-for="(tool, index) in [ job.role, job.level, ...job.languages, ...job.tools ]"
+                  v-for="(tag, index) in job.allTags"
                   :key="index"
                   class="list-item--tag ml-0 mr-4 ml-md-4 mr-md-0 my-2 font-weight-bold"
+                  @click="addFilter(tag)"
                   label
                 >
-                  {{ tool }}
+                  {{ tag }}
                 </v-chip>
               </v-col>
             </v-row>
@@ -95,8 +107,7 @@
 </template>
 
 <script>
-
-import { mapGetters } from 'vuex';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   components: {},
@@ -106,7 +117,11 @@ export default {
   }),
 
   computed: {
-    ...mapGetters(['jobs'])
+    ...mapGetters(['allJobs'])
+  },
+
+  methods: {
+    ...mapActions(['addFilter'])
   }
 };
 </script>
