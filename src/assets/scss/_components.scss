@@ -6,6 +6,12 @@
 .heading {
   box-shadow: $box-shadow;
   border-radius: $border-radius;
+  &-wrapper-parent {
+    margin-top: -72px;
+  }
+  &-wrapper-child {
+    min-height: 96px;
+  }
 }
 
 .close-btn {
@@ -73,15 +79,24 @@
 }
 
 @media only screen and (max-width: 600px) {
+  /* Heading */
+  .heading-wrapper-child {
+    min-height: 60px;
+  }
+
   .clear-btn {
     font-size: $font-sm-size;
   }
+
+  /* JobsList */
   .breadcrumbs li:nth-child(even) {
     padding: 0 4px !important;
   }
+
   .breadcrumbs .v-breadcrumbs__item {
     font-size: $font-sm-size;
   }
+
   .list-item {
     &--title {
       font-size: $font-size;

@@ -4,7 +4,7 @@
       <v-col class="grow py-2">
         <v-chip
           v-for="(filter, index) in filters"
-          :key="index"
+          :key="`filter_${index}`"
           class="background2 primary--text font-weight-bold mr-4 my-2 px-0"
           label
         >
@@ -19,7 +19,7 @@
           </span>
         </v-chip>
       </v-col>
-      <v-col class="shrink d-flex align-center">
+      <v-col class="shrink pl-0 d-flex align-center">
         <span 
           class="clear-btn primary--text font-weight-bold"
           @click="clearFilters"

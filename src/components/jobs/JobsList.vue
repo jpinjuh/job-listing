@@ -4,10 +4,10 @@
     three-line
   >
     <v-list-item
-      v-for="job in allJobs"
+      v-for="(job, index) in allJobs"
       :key="job.id"
-      class="list-item mb-10 mb-md-6 px-6 px-md-10 pt-8 pb-4 pb-md-8"
-      :class="{ 'featured': job.featured }"
+      class="list-item px-6 px-md-10 pt-8 pb-4 pb-md-8"
+      :class="{ 'featured': job.featured, 'mb-10 mb-sm-6': index < allJobs.length - 1}"
     >
       <v-list-item-avatar
         class="avatar-mobile ma-0 mr-6 d-flex d-sm-none"
@@ -25,7 +25,7 @@
         <v-row>
           <v-col
             cols="12"
-            md="6"
+            md="5"
             class="pa-0 pl-3"
           >
             <v-list-item-content class="pa-0 d-flex">
@@ -80,7 +80,7 @@
   
           <v-col
             cols="12"
-            md="6"
+            md="7"
             class="d-flex align-center py-0"
           >
             <v-row>
@@ -90,7 +90,7 @@
               >
                 <v-chip
                   v-for="(tag, index) in job.allTags"
-                  :key="index"
+                  :key="`tag_${index}`"
                   class="list-item--tag ml-0 mr-4 ml-md-4 mr-md-0 my-2 font-weight-bold"
                   @click="addFilter(tag)"
                   label

@@ -4,11 +4,8 @@
       <Header />
       <v-container fluid>
         <v-container>
-          <v-row style="margin-top: -72px">
-            <v-col
-              class="mb-6 mb-sm-2"
-              style="min-height: 96px;"
-            >
+          <v-row class="heading-wrapper-parent">
+            <v-col class="heading-wrapper-child mb-6 mb-sm-2">
               <slot name="heading" />
             </v-col>
           </v-row>
