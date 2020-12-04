@@ -2,14 +2,14 @@ import { SET_JOBS, SET_FILTERS, CLEAR_FILTERS, REMOVE_FILTER } from '../../mutat
 
 export default {
   [SET_JOBS](state, payload) {
-    payload.forEach(el => {
-      const { role, level, languages, tools, postedAt, contract, location } = el;
+    payload.forEach(job => {
+      const { role, level, languages, tools, postedAt, contract, location } = job;
 
       // allTags contains all possible tags of one job
-      el.allTags = [ role, level, ...languages, ...tools ];
+      job.allTags = [ role, level, ...languages, ...tools ];
 
       // every job has breadcrumbs: when is posted; type of contract; location
-      el.breadcrumbs = [
+      job.breadcrumbs = [
         {text: postedAt},
         {text: contract},
         {text: location}

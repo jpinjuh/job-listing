@@ -8,7 +8,7 @@
           class="background2 primary--text font-weight-bold mr-4 my-2 px-0"
           label
         >
-          <span class="px-2">
+          <span class="px-2 pt-1">
             {{ filter }}
           </span>
           <span

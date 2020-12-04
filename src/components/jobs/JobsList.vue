@@ -35,14 +35,14 @@
                 </span>
                 <v-chip
                   v-if="job['new']"
-                  class="status-tag mr-2 primary white--text text-uppercase font-weight-bold"
+                  class="status-tag mr-2 pt-1 primary white--text text-uppercase font-weight-bold"
                   small
                 >
                   New!
                 </v-chip>
                 <v-chip
                   v-if="job['featured']"
-                  class="status-tag tertiary white--text text-uppercase font-weight-bold"
+                  class="status-tag pt-1 tertiary white--text text-uppercase font-weight-bold"
                   small
                 >
                   Featured
@@ -91,7 +91,7 @@
                 <v-chip
                   v-for="(tag, index) in job.allTags"
                   :key="`tag_${index}`"
-                  class="list-item--tag ml-0 mr-4 ml-md-4 mr-md-0 my-2 font-weight-bold"
+                  class="list-item--tag ml-0 mr-4 ml-md-4 mr-md-0 my-2 pt-1 font-weight-bold"
                   @click="addFilter(tag)"
                   label
                 >
