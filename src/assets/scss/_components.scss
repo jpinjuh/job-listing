@@ -59,8 +59,19 @@
 }
 
 // if job is featured
-.featured {
+.featured:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   border-left: 5px solid var(--v-primary-base);
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  content: "";
+}
+
+.featured:hover::before {
+  opacity: 1 !important;
 }
 
 // avatar position on mobile
