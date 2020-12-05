@@ -60,9 +60,9 @@
                   class="breadcrumbs secondary--text pa-0"
                 >
                   <template slot="divider">
-                    <v-icon color="secondary">
-                      mdi-circle-medium
-                    </v-icon>
+                    <span class="px-0 px-sm-1" style="font-size: 10px">
+                      &#9679;
+                    </span>
                   </template>
                 </v-breadcrumbs>
               </v-list-item-subtitle>

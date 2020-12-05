@@ -3,8 +3,10 @@ import types from './mutationTypes';
 
 export default {
   getJobs({ commit }) {
-    getData('data.json').then(data => {
-      commit(types.SET_JOBS, data);
+    getData().then(response => {
+      commit(types.SET_JOBS, response);
+    }).catch(error => {
+      console.log(error.message);
     });
   },
 

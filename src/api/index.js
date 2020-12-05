@@ -1,9 +1,10 @@
-import http from './http';
+export async function getData () {
+  const response = await fetch('data.json');
 
-export async function getData (url) {
-  const response = await http.get(url);
+  if(!response.ok) {
+    const message = `An error has occured: ${response.status}`;
+    throw new Error(message);
+  }
 
-  console.log(response)
-
-  return response.data;
+  return response.json();
 }
