@@ -17,8 +17,8 @@
 .close-btn {
   height: 100%;
   width: 32px;
-  cursor: pointer;
   background-color: var(--v-primary-base);
+  cursor: pointer;
   &:hover {
     background-color: var(--v-tertiary-base);
   }
@@ -33,24 +33,24 @@
 
 /* JobsList */
 .list-item {
+  background-color: #fff;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
-  background-color: #fff;
   &--company {
     font-size: $font-size;
   }
   &--title {
-    font-size: $font-lg-size;
     color: var(--v-tertiary-base);
+    font-size: $font-lg-size;
     cursor: pointer;
     &:hover {
       color: var(--v-primary-base);
     }
   }
   &--tag {
-    cursor: pointer;
     background-color: var(--v-background2-base) !important;
     color: var(--v-primary-base) !important;
+    cursor: pointer;
     &:hover {
       background-color: var(--v-primary-base) !important;
       color: #fff !important;
