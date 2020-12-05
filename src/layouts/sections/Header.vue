@@ -5,10 +5,6 @@
 <script>
 
 export default {
-  components: {},
-
-  data: () => ({
-    //
-  }),
+  name: 'Header'
 };
 </script>

@@ -35,7 +35,7 @@
 import { mapActions } from 'vuex';
 
 export default {
-  components: {},
+  name: 'Heading',
 
   props: {
     filters: {
@@ -43,10 +43,6 @@ export default {
       required: true
     }
   },
-
-  data: () => ({
-    //
-  }),
 
   methods: {
     ...mapActions([

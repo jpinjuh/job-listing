@@ -25,7 +25,8 @@
         <v-row>
           <v-col
             cols="12"
-            md="5"
+            sm="6"
+            md="4"
             class="pa-0 pl-3"
           >
             <v-list-item-content class="pa-0 d-flex">
@@ -80,7 +81,8 @@
   
           <v-col
             cols="12"
-            md="7"
+            sm="6"
+            md="8"
             class="d-flex align-center py-0"
           >
             <v-row>
@@ -110,11 +112,7 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  components: {},
-
-  data: () => ({
-    //
-  }),
+  name: 'JobsList',
 
   computed: {
     ...mapGetters(['allJobs'])

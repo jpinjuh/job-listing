@@ -24,12 +24,10 @@
 import Header from './sections/Header';
 
 export default {
+  name: 'MainLayout',
+
   components: {
     Header
-  },
-
-  data: () => ({
-    //
-  }),
+  }
 };
 </script>

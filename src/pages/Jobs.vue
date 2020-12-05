@@ -22,15 +22,13 @@ import JobsList from '@/components/jobs/JobsList';
 import { mapActions, mapGetters } from 'vuex';
 
 export default {
+  name: 'Jobs',
+
   components: {
     MainLayout,
     Heading,
     JobsList
   },
-
-  data: () => ({
-    //
-  }),
 
   created () {
     this.getJobs();
