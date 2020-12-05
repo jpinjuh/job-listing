@@ -25,8 +25,8 @@
         <v-row>
           <v-col
             cols="12"
-            sm="6"
-            md="4"
+            md="6"
+            lg="4"
             class="pa-0 pl-3"
           >
             <v-list-item-content class="pa-0 d-flex">
@@ -81,8 +81,8 @@
   
           <v-col
             cols="12"
-            sm="6"
-            md="8"
+            md="6"
+            lg="8"
             class="d-flex align-center py-0"
           >
             <v-row>
