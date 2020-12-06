@@ -57,10 +57,13 @@
               <v-list-item-subtitle class="align-self-end">
                 <v-breadcrumbs
                   :items="job.breadcrumbs"
-                  class="breadcrumbs secondary--text pa-0"
+                  class="breadcrumbs pa-0 secondary--text font-weight-medium"
                 >
                   <template slot="divider">
-                    <span class="px-0 px-sm-1" style="font-size: 10px">
+                    <span
+                      class="px-0 px-sm-1"
+                      style="font-size: 10px;"
+                    >
                       &#9679;
                     </span>
                   </template>
