@@ -6,7 +6,7 @@
     <v-list-item
       v-for="(job, index) in allJobs"
       :key="job.id"
-      class="list-item px-6 px-md-10 pt-8 pb-4 pb-md-8"
+      class="list-item px-6 px-sm-10 pt-8 pb-4 pb-md-8"
       :class="{ 'featured': job.featured, 'mb-10 mb-sm-6': index < allJobs.length - 1}"
     >
       <v-list-item-avatar
